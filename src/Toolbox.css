@@ -1,0 +1,30 @@
+.toolbox {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  transform: translateX(calc(-100% - 1em));
+  transition: transform 0.2s ease-in;
+  font-size: 0.625rem;
+  border-radius: 0.5em;
+  padding: 1em;
+  background-color: #aaaa;
+  box-shadow: 0 1em 1em #888a;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+
+  text-shadow: 1px 1px 1px #d222, 1px -1px 1px #d222;
+}
+
+.toolbox.active {
+  transform: translateX(0);
+}
+
+.toolbox input {
+  width: 100%;
+}
+
+.toolbox label {
+  margin-top: 1em;
+  font-size: 1.5em;
+}

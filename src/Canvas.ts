@@ -1,9 +1,10 @@
+import { ToolboxOptions } from './Toolbox'
 interface CanvasProps {
   width: number
   height: number
   clearColor?: CanvasFillStrokeStyles['fillStyle']
-  lineColor?: CanvasFillStrokeStyles['strokeStyle']
-  lineWidth?: number
+  lineColor: CanvasFillStrokeStyles['strokeStyle']
+  lineWidth: number
 }
 
 export default class Canvas {
@@ -20,8 +21,8 @@ export default class Canvas {
     width,
     height,
     clearColor = 'black',
-    lineColor = 'white',
-    lineWidth = 5,
+    lineColor,
+    lineWidth,
   }: CanvasProps) {
     this.lineColor = lineColor
     this.clearColor = clearColor
@@ -48,6 +49,11 @@ export default class Canvas {
   resize() {
     this.canvas.width = this.width
     this.canvas.height = this.height
+  }
+
+  setOpts(opts: ToolboxOptions) {
+    this.lineColor = opts.lineColor
+    this.lineWidth = opts.lineWidth
   }
 
   clearCanvas() {
