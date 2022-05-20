@@ -1,0 +1,15 @@
+.boilerplate-welcome {
+  width: 40em;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  box-shadow: 0 5px 5px #3333;
+  padding: 1em;
+}
+
+.boilerplate-welcome h1 {
+  border-bottom: 0.25em solid #8228;
+}
+
+.boilerplate-welcome p {
+  margin-top: 1em;
+}
